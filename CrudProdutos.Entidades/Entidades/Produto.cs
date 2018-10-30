@@ -17,9 +17,5 @@ namespace CrudProdutos.Entidades.Entidades
         public decimal Preco { get; set; }
 
         public DateTime Data { get; set; }
-
-        List<TamanhoProduto> TamanhoProduto { get; set; }
-
-        List<CorProduto> CorProduto { get; set; }
     }
 }
