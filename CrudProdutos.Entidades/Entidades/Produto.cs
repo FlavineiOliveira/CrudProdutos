@@ -6,7 +6,7 @@ namespace CrudProdutos.Entidades.Entidades
 {
     public class Produto
     {
-        public int Id { get; set; }
+        public int ProdutoId { get; set; }
 
         public string Nome { get; set; }
 
@@ -17,5 +17,9 @@ namespace CrudProdutos.Entidades.Entidades
         public decimal Preco { get; set; }
 
         public DateTime Data { get; set; }
+
+        public int TamanhoProdutoId { get; set; }
+
+        public int CorProdutoId { get; set; }
     }
 }

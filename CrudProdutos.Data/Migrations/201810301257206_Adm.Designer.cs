@@ -13,7 +13,7 @@ namespace CrudProdutos.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201810301230205_Adm"; }
+            get { return "201810301257206_Adm"; }
         }
         
         string IMigrationMetadata.Source

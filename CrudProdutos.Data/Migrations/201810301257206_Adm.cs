@@ -11,45 +11,47 @@ namespace CrudProdutos.Data.Migrations
                 "dbo.CorProdutos",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        CorProdutoId = c.Int(nullable: false, identity: true),
                         ProdutoId = c.Int(nullable: false),
                         Cor = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.CorProdutoId);
             
             CreateTable(
                 "dbo.Produtos",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        ProdutoId = c.Int(nullable: false, identity: true),
                         Nome = c.String(),
                         Descricao = c.String(),
                         Foto = c.String(),
                         Preco = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Data = c.DateTime(nullable: false),
+                        TamanhoProdutoId = c.Int(nullable: false),
+                        CorProdutoId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.ProdutoId);
             
             CreateTable(
                 "dbo.TamanhoProdutos",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        TamanhoProdutoId = c.Int(nullable: false, identity: true),
                         ProdutoId = c.Int(nullable: false),
                         Tamanho = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.TamanhoProdutoId);
             
             CreateTable(
                 "dbo.Usuarios",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        UsuarioId = c.Int(nullable: false, identity: true),
                         ContaUsuario = c.String(),
                         Senha = c.String(),
                         Perfil = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.UsuarioId);
             
         }
         

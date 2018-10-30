@@ -6,7 +6,7 @@ namespace CrudProdutos.Entidades.Entidades
 {
     public class CorProduto
     {
-        public int Id { get; set; }
+        public int CorProdutoId { get; set; }
 
         public int ProdutoId { get; set; }
 

@@ -6,7 +6,7 @@ namespace CrudProdutos.Entidades.Entidades
 {
     public class TamanhoProduto
     {
-        public int Id { get; set; }
+        public int TamanhoProdutoId { get; set; }
 
         public int ProdutoId { get; set; }
 

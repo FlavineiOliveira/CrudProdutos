@@ -6,7 +6,7 @@ namespace CrudProdutos.Entidades.Entidades
 {
     public class Usuario
     {
-        public int Id { get; set; }
+        public int UsuarioId { get; set; }
 
         public string ContaUsuario { get; set; }
 
