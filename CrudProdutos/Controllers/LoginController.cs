@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrudProdutos.Entidades.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,13 @@ namespace CrudProdutos.Controllers
     {
         // GET: Login
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Usuario usuario)
         {
             return View();
         }

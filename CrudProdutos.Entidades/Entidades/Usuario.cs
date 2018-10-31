@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CrudProdutos.Entidades.Entidades
+﻿namespace CrudProdutos.Entidades.Entidades
 {
     public class Usuario
     {
         public int UsuarioId { get; set; }
-
+        
         public string ContaUsuario { get; set; }
 
         public string Senha { get; set; }
