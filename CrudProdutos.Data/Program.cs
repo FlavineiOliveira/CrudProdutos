@@ -21,10 +21,10 @@ namespace CrudProdutos.Data
                */
 
                 //Lendo Dados
-                //var usuarios = db.Usuarios;
+                var usuarios = db.Usuarios;
 
-                //foreach (var item in usuarios)
-                //Console.WriteLine(item.ContaUsuario);
+                foreach (var item in usuarios)
+                    Console.WriteLine(item.ContaUsuario);
 
                 //Deletando
                 //db.Database.Delete();

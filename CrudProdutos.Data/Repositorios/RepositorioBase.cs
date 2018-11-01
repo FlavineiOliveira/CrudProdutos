@@ -1,4 +1,6 @@
-﻿namespace CrudProdutos.Data.Repositorios
+﻿using System.Runtime.Remoting.Contexts;
+
+namespace CrudProdutos.Data.Repositorios
 {
     public class RepositorioBase  
     {

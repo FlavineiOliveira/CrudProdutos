@@ -10,7 +10,11 @@ namespace CrudProdutos.Data.Repositorios
             if (string.IsNullOrEmpty(conta) || string.IsNullOrEmpty(senha))
                 return null;
 
-            return Db.Usuarios.Where(x => x.ContaUsuario == conta && x.Senha == senha).SingleOrDefault();
+            using (Db)
+            {
+                return Db.Usuarios.Where(x => x.ContaUsuario == conta && x.Senha == senha).SingleOrDefault();
+            }
+                
         }
     }
 }

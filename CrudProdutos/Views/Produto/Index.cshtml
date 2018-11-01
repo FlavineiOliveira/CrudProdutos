@@ -1,0 +1,8 @@
+﻿
+@{
+    ViewBag.Title = "Produtos";
+}
+
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.ActionLink("Novo Produto", "Incluir", "Produto", new { }, new { @class = "btn btn-sm btn-primary pull-right" })
+<table id="gridClientes" class="table"></table>

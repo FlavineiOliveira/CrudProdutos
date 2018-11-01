@@ -1,24 +1,34 @@
-﻿using CrudProdutos.Data.Repositorios;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CrudProdutos.Data.Repositorios;
 using CrudProdutos.WebAPI.Models;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProdutos.WebAPI.Controllers
 {
-    public class AccountController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AccountController : ControllerBase
     {
-        private UsuarioRepositorio usuarioRepositorio;
+        UsuarioRepositorio usuarioRepositorio;
 
         public AccountController()
         {
             usuarioRepositorio = new UsuarioRepositorio();
         }
 
-        public ActionResult Login(Usuario usuario)
+        [HttpPost]
+        public Usuario Login ([FromBody]Usuario usuario)
         {
-            var admin = usuarioRepositorio.Login(usuario.ContaUsuario, usuario.Senha);
+            var consulta = usuarioRepositorio.Login(usuario.Conta, usuario.Senha);
 
-            return View();
+            usuario.Conta = consulta.ContaUsuario;
+            usuario.Senha = consulta.Senha;
+
+            return usuario;
         }
-
     }
 }
