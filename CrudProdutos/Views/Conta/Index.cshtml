@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+@section scripts{
+<script>
+    var urlPost = '@Url.Action("Logar", "Conta", new { area = "" })';
+</script>
+}
+
+<form>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Acessar o sistema</h2>
+            <p>Usuário</p>
+            <p><input type="text" id="usuario" name="usuario" required="required" /></p>
+            <p>Senha</p>
+            <p><input type="password" id="senha" name="senha" required="required" /></p>
+            <button type="submit" class="btn btn-default">Login</button>
+        </div>
+    </div>
+</form>
+

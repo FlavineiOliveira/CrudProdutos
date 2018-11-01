@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace CrudProdutos.Controllers
 {
-    public class LoginController : Controller
+    public class ContaController : Controller
     {
         // GET: Login
         public ActionResult Index()
@@ -17,9 +17,9 @@ namespace CrudProdutos.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Usuario usuario)
+        public ActionResult Logar(Usuario usuario)
         {
-            return View();
+            return Json("O CPF informado é inválido!");
         }
     }
 }
